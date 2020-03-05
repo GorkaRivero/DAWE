@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1><%= title %></h1>
+    <p>Welcome to <%= title %></p>
+    <form id="upload" method="POST" enctype="multipart/form-data" action="/users/add">
+
+      <fieldset>
+        <legend>Datos del cliente</legend>
+
+        <div>
+
+          <label>Nombre: </label><input type="text" name="nombreCliente" id="nombre" placeholder="Introduce tu nombre" size="45" autofocus/>
+          <br><br>
+          <label>Telefono: </label><input type="tel" name="telefono" id="telefono" placeholder="Patrón: 123-45-789" pattern="[0-9]{3}-[0-9]{3}-[0-9]{3}" required maxlength="11" size="44"/>
+          <br><br>
+          <label>E-mail: </label><input type="email" name="email" id="email" placeholder="Introduce tu dirección de correo electronico" pattern=".+@gmail.com" size="46"/>
+
+
+        </div>
+
+      </fieldset>
+      <input type="submit" id="enviar" value="enviar">
+    </form>
+
+
+
+  </body>
+</html>
